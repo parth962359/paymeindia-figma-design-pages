@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+body,html{
+    font-family: 'Assistant';
+}
+
+.swiper-pagination-bullet {
+    
+  background: #000000;
+}
+.swiper-pagination-bullet-active {
+  background: #ff7e1f;
+}
