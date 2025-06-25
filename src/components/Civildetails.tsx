@@ -125,11 +125,10 @@ export const Civildetails = () => {
           <select
             id="Gender"
             name="Gender"
+            
             className="mb-2 w-full h-[48px] border text-gray-400 border-gray-300 rounded-md pl-4"
           >
-            <option value="" disabled hidden>
-              Gender
-            </option>
+            <option value="gender" hidden>Gender</option>
             <option value="male">male</option>
             <option value="female">female</option>
             <option value="others">others</option>
