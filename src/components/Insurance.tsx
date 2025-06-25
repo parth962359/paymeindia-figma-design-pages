@@ -1,5 +1,6 @@
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
+import { useState,useEffect } from "react";
 import Family from "../assets/family.svg";
 import dailytodo from "../assets/dailytodo.svg";
 import tick from "../assets/图层_x0020_1.svg";
@@ -15,6 +16,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
 export const Insurance = () => {
+
+const [windowDimensions, setWindowDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const sliderdata = [
     {
       image: `${scooty}`,
@@ -48,17 +66,17 @@ export const Insurance = () => {
 
   const navigate = useNavigate();
   return (
-    <div className="min-w-[320px] max-w-[768px] w-full bg-[#FFFFFF] h-[900px] sm:h-[983px]  sm:max-w-[768px] sm:min-w-[320px] mx-auto">
-      <div className="min-w-[320px] max-w-[428px] w-full h-[143px] flex flex-items-center pt-28 justify-start gap-[20px] p-[16px] sm:gap-[49px] sm:p-[20px]">
-        <div className="w-[18.72px] h-[13.72px] flex items-center pt-3 rounded-full justify-center">
+    <div className="min-w-[320px]  w-full bg-[#FFFFFF]    sm:min-w-[320px] mx-auto">
+      <div className="min-w-[320px]  w-full h-auto  flex flex-items-center  justify-start gap-[10px] p-[10px] sm:gap-[9px] sm:p-[10px]">
+        <div className="h-[31px]  flex items-center   rounded-full justify-center">
           <FaArrowLeft />
         </div>
-        <div className="font-bold w-[104px] h-[31px]">Insurance</div>
+        <div className="font-bold  w-full h-[31px] text-center text-xl flex justify-center items-center ">Insurance</div>
       </div>
       <hr className="text-gray-300" />
 
       <div className="w-full h-full flex flex-col">
-        <img src={Family} alt="" className="w-full max-w-[320px] sm:max-w-[428px] mx-auto" />
+        <img src={Family} alt="" className="w-full   mx-auto" />
         <div className="flex flex-col justify-center items-center m-4 gap-3 sm:space-x-2">
           <Containers
             firsticon={dailytodo}
@@ -101,11 +119,12 @@ export const Insurance = () => {
           <div className="w-full flex justify-center mt-[24px] px-2 sm:mx-[10px] ">
             <Swiper
               modules={[Pagination, Autoplay]}
-              slidesPerView={1}
-              spaceBetween={20}
-              pagination={{ clickable: true }}
+              slidesPerView={windowDimensions.width >= 700 ? 2 : 1}
+              spaceBetween={30}
+              pagination={{ clickable: true  }}
               autoplay={{ delay: 2500, disableOnInteraction: false }}
               className="w-full pb-[32px]"
+              style={{paddingBottom:"34px"}}
             >
               {sliderdata.map((items, key) => (
                 <SwiperSlide key={key}>

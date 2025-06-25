@@ -7,7 +7,8 @@ body,html{
 
 .swiper-pagination-bullet {
     
-  background: #000000;
+  background: #303030;
+  opacity: 90%
 }
 .swiper-pagination-bullet-active {
   background: #ff7e1f;

@@ -15,7 +15,7 @@ const color1style={
 
 export const Slidercontainer = ({yourImage,text1,text2,buttontext,color1}:Slidercontainer) => {
   return (
-    <div className={`flex items-center justify-between w-full max-w-[428px] min-w-[0] h-[90px] sm:w-[370px] sm:min-w-[320px] ${color1style[color1]} rounded-lg p-2 sm:p-3 shadow-sm mx-auto`}> 
+    <div className={`flex items-center justify-between w-full  min-w-[0] h-[90px] sm:w-[370px]  ${color1style[color1]} rounded-lg p-2 sm:p-3 shadow-sm mx-auto`}> 
       <div className="flex items-center gap-2 sm:gap-3">
         {/* Image placeholder */}
         <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-md flex items-center justify-center border border-gray-200">

@@ -13,20 +13,20 @@ import { useNavigate } from "react-router-dom";
 export const Civildetails = () => {
   const navigate = useNavigate();
   return (
-    <div className="min-w-[320px] max-w-[428px] w-full bg-[#FFFFFF] min-h-screen h-auto mx-auto">
-      <div className="min-w-[320px] max-w-[428px] w-full h-[120px] flex flex-items-center pt-20 justify-start gap-4 sm:gap-[49px] p-4 sm:p-[20px] mx-auto">
+    <div className=" w-full bg-[#FFFFFF] min-h-screen  mx-auto">
+      <div className=" w-full  flex flex-items-center  justify-start  p-4 sm:p-[20px] mx-auto">
         <div
           onClick={() => navigate("/")}
           className="w-[18.72px] h-[13.72px] flex items-center pt-3 rounded-full justify-center"
         >
           <FaArrowLeft />
         </div>
-        <div className="font-bold text-xl sm:text-2xl text-center w-[60%]">
+        <div className="font-bold text-xl sm:text-2xl text-center w-full">
           Details
         </div>
       </div>
       <hr className="text-gray-300" />
-      <div className="w-full max-w-[428px] min-w-[0] h-auto mx-auto p-2 sm:p-5">
+      <div className="w-full lg:text-2xl min-w-[0] h-auto mx-auto p-2 sm:p-5">
         <div className="flex justify-between  sm:flex-row sm:justify-between pb-3 gap-2 sm:gap-0">
           <Oneliner
             variant={"md"}

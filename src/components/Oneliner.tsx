@@ -15,8 +15,8 @@ md: "text-[#152745] font-bold ",
 export const Oneliner = ({variant, starticon, text}:OnelinerProps) => {
   return (
     <div>
-        <div className="flex items-center w-auto gap-2">
-            <div className="w-6 h-6 flex items-center justify-center rounded-full bg-gray-200">
+        <div className="flex items-start w-auto gap-2">
+            <div className="w-6 h-6 flex items-center justify-start rounded-full bg-gray-200">
             <img src={starticon} alt="" />
             </div>
             <span className={textstyles[variant]}>{text}</span>

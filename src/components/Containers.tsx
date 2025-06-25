@@ -37,8 +37,8 @@ export const Containers = ({
   onclick
 }: ContainersProps) => {
   return (
-    <div className="w-full m-3 sm:m-4 max-w-[428px] min-w-[0] border border-gray-300 rounded-lg p-2 sm:p-4 bg-white gap-2 sm:gap-4 mx-auto">
-      <div className="flex  sm:flex-row sm:justify-between pb-2 sm:pb-4 gap-2 sm:gap-0">
+    <div className="w-full m-3   border border-gray-300 rounded-lg p-2 sm:p-4 bg-white gap-2 sm:gap-4 mx-auto">
+      <div className="flex  flex-row justify-between pb-2 pb-4 gap-2 sm:gap-0">
         <Oneliner variant={designstyle} starticon={firsticon} text={heading1}  />
         <div className="text-right sm:text-left">
           <span className="font-bold text-[#152745] text-base sm:text-lg"> ₹{amount} </span>{" "}
