@@ -66,7 +66,7 @@ const [windowDimensions, setWindowDimensions] = useState({
 
   const navigate = useNavigate();
   return (
-    <div className="min-w-[320px]  w-full bg-[#FFFFFF]    sm:min-w-[320px] mx-auto">
+    <div className="min-w-[320px]  w-full bg-[#FFFFFF] overflow-hidden   sm:min-w-[320px] mx-auto">
       <div className="min-w-[320px]  w-full h-auto  flex flex-items-center  justify-start gap-[10px] p-[10px] sm:gap-[9px] sm:p-[10px]">
         <div className="h-[31px]  flex items-center   rounded-full justify-center">
           <FaArrowLeft />
@@ -77,7 +77,7 @@ const [windowDimensions, setWindowDimensions] = useState({
 
       <div className="w-full h-full flex flex-col">
         <img src={Family} alt="" className="w-full   mx-auto" />
-        <div className="flex flex-col justify-center items-center m-4 gap-3 sm:space-x-2">
+        <div className="flex flex-col justify-center items-center m-4 gap-3 lg:flex-row lg:flex-1/3  sm:space-x-2">
           <Containers
             firsticon={dailytodo}
             heading1={"DailyCare 300"}
@@ -91,6 +91,26 @@ const [windowDimensions, setWindowDimensions] = useState({
             buttonicon={<FaArrowRight />}
             buttontext={"View Details"}
             design={"primary"}
+            designstyle={"md"}
+            designstyle2={"sm"}
+            onclick={() => navigate("/Insurancepolicy")}
+          />
+
+
+
+          <Containers
+            firsticon={dailytodo}
+            heading1={"DailyCare 300"}
+            amount={"59"}
+            firsticon1={tick}
+            firsticon2={tick}
+            firsticon3={tick}
+            text1={"Up to ₹9,000 annual coverage per person"}
+            text2={"1 month free Online Eye & Dental consultancy"}
+            text3={"1 free Online Blood Test"}
+            buttonicon={<FaArrowRight />}
+            buttontext={"View Details"}
+            design={"secondary"}
             designstyle={"md"}
             designstyle2={"sm"}
             onclick={() => navigate("/Insurancepolicy")}
